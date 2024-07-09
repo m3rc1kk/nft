@@ -1,0 +1,43 @@
+body {
+  @include fluid-text(16, 18);
+
+  font-family: 'Work Sans';
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+a, 
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  @include fluid-text(28, 67)
+}
+
+h2 {
+  @include fluid-text (38, 51)
+}
+
+h3 {
+  @include fluid-text (28, 38)
+}
+
+h4 {
+  @include fluid-text (22, 28)
+}
+
+h5 {
+  font-size: 22px;
+}
+

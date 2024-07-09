@@ -1,0 +1,9 @@
+@mixin flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin fluid-text($min, $max) {
+  font-size: clamp(#{$min}px, #{calc($max / 1280 * 100)}vw, #{$max}px);
+}
