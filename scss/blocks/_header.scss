@@ -1,0 +1,46 @@
+.header {
+  &__inner {
+    @include flex-sb;
+
+    column-gap: 30px;
+    padding-top: 20px;
+    font-size: 16px;
+    padding-inline: 50px;
+
+    @include tablet {
+      padding-top: 15px;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      width: 182px;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    
+    &-list {
+      display: flex;
+      column-gap: 30px;
+      padding-right: 30px;
+      font-weight: 600;
+    }
+
+    &-link {
+      display: inline-flex;
+      height: 48px;
+      align-items: center;
+
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__button {
+    padding-inline: var(--button-padding-x-alt);
+  }
+}

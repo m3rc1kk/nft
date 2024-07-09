@@ -16,7 +16,7 @@ $mobile: 767px;
 };
 
 @mixin desktop-above {
-  @media (max-width: $desktop-above) {
+  @media (min-width: $desktop-above) {
     @content
   }
 };
@@ -28,7 +28,7 @@ $mobile: 767px;
 };
 
 @mixin tablet-above {
-  @media (max-width: $tablet-above) {
+  @media (min-width: $tablet-above) {
     @content
   }
 };
@@ -40,7 +40,7 @@ $mobile: 767px;
 };
 
 @mixin mobile-above {
-  @media (max-width: $mobile-above) {
+  @media (min-width: $mobile-above) {
     @content
   }
 };
