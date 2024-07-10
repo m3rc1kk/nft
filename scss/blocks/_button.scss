@@ -10,6 +10,16 @@
   border-radius: var(--border-radius);
   border: 0;
 
+  &--square {
+    @include reset-button;
+    @include square(100px);
+
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    align-items: center;
+    justify-content: center;
+  }
+
   @include hover {
     background-color: var(--color-gray);
   }

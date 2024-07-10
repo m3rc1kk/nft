@@ -109,6 +109,10 @@
       bottom: -87px;
       left: 20px;
     }
+
+    @include mobile {
+      margin-bottom: 110px;
+    }
   }
 
   &__author {
