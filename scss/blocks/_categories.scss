@@ -1,0 +1,113 @@
+.categories {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    gap: 30px;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 240px);
+      justify-content: center;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(4, 150px);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 148px);
+      row-gap: 20px;
+      
+    }
+  }
+
+  &__image {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    position: relative;
+    z-index: -2;
+
+    @include tablet {
+      width: 150px;
+      height: 142px;
+    }
+
+    @include mobile {
+      width: 148px;
+      height: 142px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 240px;
+      height: 76px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-dark-alt);
+      border-bottom-left-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+      z-index: -1;
+
+      @include tablet {
+        width: 150px;
+      }
+
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 240px;
+      height: 215px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(5px);
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+
+      @include tablet {
+        width: 150px;
+        height: 142px;
+      }
+    }
+
+    @include hover {
+      opacity: .7;
+      transition-duration: var(--transition-duration);
+    }
+  }
+
+  &__title {
+    max-width: 240px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+
+    @include tablet {
+      font-size: 16px;
+      max-width: 110px;
+      padding-left: 20px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    translate: -50%;
+
+    @include tablet {
+      width: 80px;
+      height: auto;
+      top: 10%;
+    }
+
+
+  }
+}

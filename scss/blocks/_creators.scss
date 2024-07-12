@@ -1,0 +1,114 @@
+.creators {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    counter-reset: custom-counter;
+    list-style: none;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    background-color: var(--color-dark-alt);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    counter-increment: custom-counter;
+
+    @include hover {
+      opacity: .7;
+      transition-duration: var(--transition-duration);
+    }
+
+    @include tablet {
+      &:nth-child(n+7) {
+        display: none !important;
+      }
+
+      flex-direction: row;
+      column-gap: 20px;
+    }
+
+    @include mobile {
+      &:nth-child(n+6) {
+        display: none !important;
+      }
+      column-gap: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: counter(custom-counter);
+      color: var(--color-gray);
+      background-color: var(--color-dark);
+      width: 30px;
+      height: 28px;
+      text-align: center;
+      padding-top: 2px;
+      border-radius: 50%;
+      font-family: var(--font-family-additional);
+      position: absolute;
+      top: -280%;
+      left: 0;
+
+      @include tablet {
+        top: -21%;
+        left: -43%;
+      }
+    }
+
+    @include tablet {
+      align-items: start;
+    }
+  }
+
+  &__image {
+    @include tablet {
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  &__description {
+    display: flex;
+    column-gap: 10px;
+    color: var(--color-gray);
+    align-items: center;
+
+    @include tablet {
+      column-gap: 20px;
+    }
+
+    @include mobile {
+      column-gap: 10px;
+    }
+  }
+
+  &__size {
+    color: var(--color-light);
+    font-family: var(--font-family-additional);
+  }
+}

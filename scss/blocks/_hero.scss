@@ -4,7 +4,7 @@
 
     align-items: start;
     column-gap: 30px;
-  
+
     @include mobile {
       flex-direction: column;
       align-items: center;
@@ -120,6 +120,5 @@
     align-items: center;
     column-gap: 12px;
   }
-  
 
 }

@@ -23,4 +23,14 @@
   @include hover {
     background-color: var(--color-gray);
   }
+
+  &--transparent {
+    border: var(--border);
+    background-color: var(--color-dark);
+
+    @include hover {
+      background-color: var(--color-light);
+      color: var(--color-accent);
+    }
+  }
 }

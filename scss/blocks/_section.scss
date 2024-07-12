@@ -6,19 +6,36 @@
   }
 
   &__header {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    @include flex-sb;
     padding-bottom: 60px;
-
+    
     @include tablet {
       padding-bottom: 40px;
     }
 
     @include mobile {
-      max-width: 315px;
+      flex-direction: column;
+      row-gap: 40px;
     }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      @include mobile {
+        max-width: 315px;
+      }
+    }
+
   }  
+
+  &__button {
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 
   &__title {
     @include tablet {
