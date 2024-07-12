@@ -1,0 +1,30 @@
+.nft-discover {
+  &__list {
+    @include flex-sb;
+
+    column-gap: 30px;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      &:last-child {
+        display: list-item;
+      }
+    }
+  }
+}

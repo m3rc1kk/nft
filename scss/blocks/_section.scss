@@ -8,6 +8,7 @@
   &__header {
     @include flex-sb;
     padding-bottom: 60px;
+    align-items: end;
     
     @include tablet {
       padding-bottom: 40px;
@@ -15,6 +16,7 @@
 
     @include mobile {
       flex-direction: column;
+      align-items: start;
       row-gap: 40px;
     }
 

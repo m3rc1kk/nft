@@ -2,6 +2,7 @@
 
   &__list {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(4, 240px);
     gap: 30px;
 
