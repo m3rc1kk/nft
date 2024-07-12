@@ -1,0 +1,124 @@
+.nft-highlight {
+  background-image: url('/images/nft-highlight/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 990px;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    height: 600px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: var(--color-accent);
+    filter: blur(150px);
+    transition: opacity 0.3;
+    z-index: 0;
+  }
+
+  &__title {
+    @include tablet {
+      font-size: 38px;
+    }
+  }
+
+  &__button {
+    @include mobile {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    height: 990px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 30px;
+      padding-bottom: 350px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 30px;
+  }
+
+  &__artist {
+    &-card {
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: var(--color-dark-alt);
+      border-radius: var(--border-radius);
+    } 
+  }
+
+  &__auction-end {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+    padding: 30px;
+    background-color: rgba(23, 23, 23, 0.5);
+    border-radius: var(--border-radius);
+    position: relative;
+    z-index: 2;
+
+    @include mobile {
+      padding: 20px;
+    }
+  }
+
+  &__timer {
+    display: flex;
+    column-gap: 38px;
+    align-items: center;
+    font-family: var(--font-family-additional);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+    }
+  }
+
+  &__timer-item:before {
+    content: ":";
+    position: absolute;
+    left: 90px;
+    top: 65px;
+    font-family: var(--font-family-additional);
+    font-size: 28px;
+  } 
+
+  &__timer-item:after {
+    content: ":";
+    position: absolute;
+    left: 180px;
+    top: 65px;
+    font-family: var(--font-family-additional);
+    font-size: 28px;
+  }
+  
+}
