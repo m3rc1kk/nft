@@ -1,0 +1,10 @@
+.input {
+  border: 0;
+  width: 425px;
+  padding: 19px 0 19px 20px;
+  border-radius: var(--border-radius);
+  outline: none;
+  &::placeholder {
+    color: var(--color-dark);
+  }
+}

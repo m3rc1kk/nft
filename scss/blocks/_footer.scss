@@ -1,0 +1,138 @@
+.footer {
+  background-color: var(--color-dark-alt);
+
+  &__inner {
+    @include flex-sb;
+
+    align-items: start;
+    column-gap: 25px;
+    padding-block: 30px 40px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 30px;
+    }
+  }
+
+  &__nft-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 244px;
+    color: var(--color-gray-alt);
+
+    &-description {
+      padding-block: 30px 20px;
+
+      @include mobile {
+        padding-block: 20px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 15px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    &-link {
+      @include hover {
+        opacity: .7;
+      }
+    }
+  }
+
+
+  &__explore {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 25px;
+    max-width: 133px;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+
+    &-title {
+      font-family: var(--font-family-additional);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      row-gap: 20px;
+      color: var(--color-gray-alt);
+    }
+
+    &-link {
+      @include hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 420px;
+
+    &-title {
+      font-family: var(--font-family-additional);
+    }
+
+    &-description {
+      padding-block: 25px 20px;
+      
+      @include mobile {
+        padding-block: 20px;
+      }
+    }
+
+    @include mobile {
+      max-width: 315px;
+    }
+  }
+
+  &__send {
+    display: flex;
+    position: relative;
+    
+    @include mobile {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 60%;
+    
+    @include mobile {
+      position: static;
+      width: 100%;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__input {
+    @include mobile {
+      width: 100%;
+      height: 46px;
+    }
+  }
+
+}
